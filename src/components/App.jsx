@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "./Input";
-import ToDos from "./ToDoList";
+import AddTodo from "./AddTodo";
+import ToDos from "./TodoList";
 import "./App.css";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <h1>todos</h1>
       </header>
-      <Input />
+      <AddTodo />
       <ToDos />
     </div>
   );
