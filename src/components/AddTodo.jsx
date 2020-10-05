@@ -12,9 +12,7 @@ function AddTodo({ addTodo }) {
     setTodoText("");
   };
 
-  const onChange = (e) => {
-    setTodoText(e.target.value);
-  };
+  const onChange = (e) => setTodoText(e.target.value);
 
   return (
     <>
