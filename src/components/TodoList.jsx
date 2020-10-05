@@ -1,9 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { connect } from "react-redux";
 
-function TodoList() {
-  const todos = useSelector((state) => state.todos);
+const mapStateToProps = (state) => ({ todos: state.todos });
 
+const TodoList = ({ todos }) => {
   return (
     <ul>
       {todos.map((todo, index) => (
@@ -11,6 +11,6 @@ function TodoList() {
       ))}
     </ul>
   );
-}
+};
 
-export default TodoList;
+export default connect(mapStateToProps, null)(TodoList);

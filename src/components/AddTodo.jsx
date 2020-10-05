@@ -4,7 +4,7 @@ import { addTodo } from "../feature/todos/todosSlice";
 
 const mapDispatch = { addTodo };
 
-function AddTodo({ addTodo }) {
+const AddTodo = ({ addTodo }) => {
   const [todoText, setTodoText] = useState("");
 
   const save = () => {
@@ -25,6 +25,6 @@ function AddTodo({ addTodo }) {
       <button onClick={save}>Save</button>
     </>
   );
-}
+};
 
 export default connect(null, mapDispatch)(AddTodo);
